@@ -20,7 +20,7 @@ class _LoadingState extends State<Loading> {
               Image.asset("assets/logomain.png"),
               SizedBox(height: 125.0),
               SpinKitWave(
-              color: Color(0xff00c2cb),
+              color: Color(0xff  ),
               size: 25.0,
           ),
             ],
