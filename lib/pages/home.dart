@@ -36,7 +36,11 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   CarouselSlider(
-                    options: CarouselOptions(height: 280.0, initialPage: 0, autoPlay: true, enlargeCenterPage: true),
+                    options: CarouselOptions(height: 280.0,
+                        initialPage: 0,
+                        autoPlay: true,
+                        enableInfiniteScroll: true,
+                        enlargeCenterPage: true),
                     items: imgList.map((i) {
                       return Builder(
                         builder: (BuildContext context) {

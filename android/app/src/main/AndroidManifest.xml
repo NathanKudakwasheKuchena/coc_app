@@ -9,6 +9,10 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="Church of Christ"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAJt2Ttg5HmE1d5QEdxolpCklej8FJbBOE"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
