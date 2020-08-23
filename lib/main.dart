@@ -2,6 +2,7 @@ import 'package:coc_app/pages/contact.dart';
 import 'package:coc_app/pages/hymns.dart';
 import 'package:coc_app/pages/lessons.dart';
 import 'package:coc_app/pages/loading.dart';
+import 'package:coc_app/pages/members.dart';
 import 'package:flutter/material.dart';
 import 'package:coc_app/pages/home.dart';
 
@@ -18,7 +19,7 @@ class cocMain extends StatefulWidget {
 class _cocMainState extends State<cocMain> {
 
   int _currentIndex = 0;
-  final List <Widget> pages = <Widget>[Home(), Lessons(), Hymns(), Contact()];
+  final List <Widget> pages = <Widget>[Home(), Lessons(), Hymns(), Contact(), Members()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -74,6 +75,15 @@ class _cocMainState extends State<cocMain> {
               ),
               )
           ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person,
+                color: Color(0xff00c2cb),),
+              title: Text("Members", style: TextStyle(
+                  color: Color(0xff00c2cb),
+                  fontFamily: "DidactGothic"
+              ),
+              )
+          )
         ],
         onTap: _onItemTapped,
       ),);

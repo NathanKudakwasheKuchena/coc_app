@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "248422541951",
+    "firebase_url": "https://mobdevrt.firebaseio.com",
+    "project_id": "mobdevrt",
+    "storage_bucket": "mobdevrt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248422541951:android:a6317c1e2a58dd7ab5ad4a",
+        "android_client_info": {
+          "package_name": "com.example.coc_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248422541951-3i2mi53jf9laau1otrr7ale46avdsame.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY11Uf0OXUkRi3MHtyO9fArZGv-Ogkmf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248422541951-3i2mi53jf9laau1otrr7ale46avdsame.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
