@@ -22,9 +22,6 @@ class _MembersState extends State<Members> {
   @override
   Widget build(BuildContext context) {
 
-    final user = Provider.of<User>(context);
-
-    print(user);
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff00c2cb),
@@ -43,6 +40,16 @@ class _MembersState extends State<Members> {
       child: Column(
       children: <Widget>[
       SizedBox(height: 20.0),
+        Text(
+          "Enter email",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontFamily: "DidactGothic",
+            fontSize: 25.0,
+            color: Color(0xff00c2cb),
+          ),
+        ),
+        SizedBox(height: 5.0),
       TextFormField(
         validator: (val) => val.isEmpty ? "Enter an email" : null,
       onChanged: (val) {
@@ -50,6 +57,16 @@ class _MembersState extends State<Members> {
       },
       ),
       SizedBox(height: 20.0),
+        Text(
+          "Enter password",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontFamily: "DidactGothic",
+            fontSize: 25.0,
+            color: Color(0xff00c2cb),
+          ),
+        ),
+        SizedBox(height: 5.0),
       TextFormField(
       obscureText: true,
         validator: (val) => val.length < 6 ? "Enter a password 6+ letters long" : null,
