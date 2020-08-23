@@ -19,7 +19,10 @@ class _HymnsState extends State<Hymns> {
           ),
         ),
       ),
-      body: SafeArea(child: Text("Hymns page"),),
+      body: SafeArea(child: Text("2 JESU NDISHAMWARI WEDU"
+    "Jesu ndishamwari wedu Mununuri wakanaka Tinokomborerwa kwazvo Tine hama"
+      ),
+      ),
     );
   }
 }

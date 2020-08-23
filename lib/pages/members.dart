@@ -21,93 +21,95 @@ class _MembersState extends State<Members> {
 
   @override
   Widget build(BuildContext context) {
+
     final user = Provider.of<User>(context);
+
     print(user);
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff00c2cb),
-        centerTitle: true,
-        title: Text(
-          "Members",
-          style: TextStyle(
-              fontFamily: "DidactGothic"
+        appBar: AppBar(
+          backgroundColor: Color(0xff00c2cb),
+          centerTitle: true,
+          title: Text(
+            "Members",
+            style: TextStyle(
+                fontFamily: "DidactGothic"
+            ),
           ),
         ),
-      ),
-      body: SafeArea(child: Container(
-    padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-    child: Form(
-      key: _formkey,
-    child: Column(
-    children: <Widget>[
-    SizedBox(height: 20.0),
-    TextFormField(
-      validator: (val) => val.isEmpty ? "Enter an email" : null,
-    onChanged: (val) {
-    setState(() => email = val);
-    },
-    ),
-    SizedBox(height: 20.0),
-    TextFormField(
-    obscureText: true,
-      validator: (val) => val.length < 6 ? "Enter a password 6+ letters long" : null,
-    onChanged: (val) {
-    setState(() => password = val);
-    },
-    ),
-    SizedBox(height: 20.0),
-    Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        body: SafeArea(child: Container(
+      padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+      child: Form(
+        key: _formkey,
+      child: Column(
       children: <Widget>[
-        RaisedButton(
-            color: Color(0xff00c2cb),
-            child: Text(
-              "Login",
-              style: TextStyle(color: Colors.white
+      SizedBox(height: 20.0),
+      TextFormField(
+        validator: (val) => val.isEmpty ? "Enter an email" : null,
+      onChanged: (val) {
+      setState(() => email = val);
+      },
+      ),
+      SizedBox(height: 20.0),
+      TextFormField(
+      obscureText: true,
+        validator: (val) => val.length < 6 ? "Enter a password 6+ letters long" : null,
+      onChanged: (val) {
+      setState(() => password = val);
+      },
+      ),
+      SizedBox(height: 20.0),
+      Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          RaisedButton(
+              color: Color(0xff00c2cb),
+              child: Text(
+                "Login",
+                style: TextStyle(color: Colors.white
+                ),
               ),
-            ),
-    onPressed: () async {
-      if (_formkey.currentState.validate()) {
-        dynamic result = await _auth.signInEmailPassword(email, password);
-        if (result == null) {
-          setState(() {
-            error = 'Please supply valid login credentials';
-          });
+      onPressed: () async {
+        if (_formkey.currentState.validate()) {
+          dynamic result = await _auth.signInEmailPassword(email, password);
+          if (result == null) {
+            setState(() {
+              error = 'Please supply valid login credentials';
+            });
+          }
         }
       }
-    }
-        ),
-        RaisedButton(
-        color: Color(0xff00c2cb),
-        child: Text(
-        "Register",
-        style: TextStyle(color: Colors.white
-        ),
-        ),
-            onPressed: () async {
-              if(_formkey.currentState.validate()){
-                dynamic result = await _auth.registerEmailPassword(email, password);
-                if(result == null) {
-                  setState(() {
-                    error = 'Please supply a valid email';
-                  });
+          ),
+          RaisedButton(
+          color: Color(0xff00c2cb),
+          child: Text(
+          "Register",
+          style: TextStyle(color: Colors.white
+          ),
+          ),
+              onPressed: () async {
+                if(_formkey.currentState.validate()){
+                  dynamic result = await _auth.registerEmailPassword(email, password);
+                  if(result == null) {
+                    setState(() {
+                      error = 'Please supply a valid email';
+                    });
+                  }
                 }
               }
-            }
-        ),
-          SizedBox(height: 12.0),
-          ]
-        ),
-      Text(
-        error,
-        style: TextStyle(color: Colors.red, fontSize: 14.0),
+          ),
+            SizedBox(height: 12.0),
+            ]
+          ),
+        Text(
+          error,
+          style: TextStyle(color: Colors.red, fontSize: 14.0),
+        )
+        ],
+      ),
+      ),
+        )
       )
-      ],
-    ),
-    ),
-      )
-    )
-      );
+    );
   }
 }

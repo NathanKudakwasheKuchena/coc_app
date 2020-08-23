@@ -9,6 +9,7 @@ import 'package:coc_app/services/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:coc_app/pages/home.dart';
 import 'package:provider/provider.dart';
+import 'package:coc_app/pages/thehub.dart';
 
 void main() => runApp(MaterialApp(
     home: cocMain(),
@@ -34,9 +35,8 @@ class _cocMainState extends State<cocMain> {
   @override
   Widget build(BuildContext context) {
 
-    return StreamProvider.value(
-      value: AuthService().userStream,
-      child: Scaffold(
+
+    return Scaffold(
         body: Center(
           child: pages.elementAt(_currentIndex),
         ),
@@ -93,7 +93,7 @@ class _cocMainState extends State<cocMain> {
             )
           ],
           onTap: _onItemTapped,
-        ),),
+        ),
     );
   }
 }
