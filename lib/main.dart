@@ -4,6 +4,7 @@ import 'package:coc_app/pages/lessons.dart';
 import 'package:coc_app/pages/loading.dart';
 import 'package:coc_app/pages/members.dart';
 import 'package:coc_app/services/auth.dart';
+import 'package:coc_app/services/routes.dart';
 import 'package:coc_app/services/usermodel.dart';
 import 'package:coc_app/services/wrapper.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,8 @@ import 'package:provider/provider.dart';
 import 'package:coc_app/pages/thehub.dart';
 
 void main() => runApp(MaterialApp(
-    home: cocMain(),
+    initialRoute: '/',
+    onGenerateRoute: Routes.generateRoute,
   ));
 
 

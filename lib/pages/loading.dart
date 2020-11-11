@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'dart:async';
 
 class Loading extends StatefulWidget {
   @override
@@ -7,6 +8,18 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
+
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 6), () {
+      // Pushing a named route
+      Navigator.of(context).pushNamed(
+        '/home',
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +31,11 @@ class _LoadingState extends State<Loading> {
             children: <Widget>[
               SizedBox(height: 150.0),
               Image.asset("assets/logomain.png"),
-              SizedBox(height: 125.0),
+              SizedBox(height: 85.0),
               SpinKitWave(
-              color: Color(0xff  ),
-              size: 25.0,
-          ),
+                color: Color(0xff00c2cb),
+                size: 25.0,
+              ),
             ],
           ),
         ),
