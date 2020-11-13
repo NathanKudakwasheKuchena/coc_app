@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                               width: MediaQuery.of(context).size.width,
                               margin: EdgeInsets.symmetric(horizontal: 5.0),
                               decoration: BoxDecoration(
-                                  color: Colors.amber
+                                  color: Color(0xff00c2cb),
                               ),
                               child: Image.asset(i, fit: BoxFit.fill),
                           );

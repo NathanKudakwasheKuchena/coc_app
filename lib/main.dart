@@ -17,7 +17,6 @@ void main() => runApp(MaterialApp(
     onGenerateRoute: Routes.generateRoute,
   ));
 
-
 class cocMain extends StatefulWidget {
   @override
   _cocMainState createState() => _cocMainState();
@@ -58,14 +57,15 @@ class _cocMainState extends State<cocMain> {
             ),
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.library_books,
+                icon: Icon(Icons.camera_alt,
                   color: Color(0xff00c2cb),),
-                title: Text("Lessons", style: TextStyle(
+                title: Text("Gallery", style: TextStyle(
                   color: Color(0xff00c2cb),
                     fontFamily: "DidactGothic"
                 ),
                 )
             ),
+
             BottomNavigationBarItem(
                 icon: Icon(Icons.library_music,
                   color: Color(0xff00c2cb),),
@@ -75,6 +75,7 @@ class _cocMainState extends State<cocMain> {
                 ),
                 )
             ),
+
             BottomNavigationBarItem(
                 icon: Icon(Icons.phone,
                   color: Color(0xff00c2cb),),
@@ -84,6 +85,7 @@ class _cocMainState extends State<cocMain> {
                 ),
                 )
             ),
+
             BottomNavigationBarItem(
                 icon: Icon(Icons.person,
                   color: Color(0xff00c2cb),),

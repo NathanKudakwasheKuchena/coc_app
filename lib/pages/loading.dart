@@ -13,7 +13,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 6), () {
-      // Pushing a named route
+      // Pushing a named route after loading is complete
       Navigator.of(context).pushNamed(
         '/home',
       );

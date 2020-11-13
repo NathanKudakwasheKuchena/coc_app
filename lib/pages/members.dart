@@ -87,14 +87,10 @@ class _MembersState extends State<Members> {
                 ),
               ),
       onPressed: () async {
-        if (_formkey.currentState.validate()) {
-          dynamic result = await _auth.signInEmailPassword(email, password);
-          if (result == null) {
-            setState(() {
-              error = 'Please supply valid login credentials';
-            });
-          }
-        }
+        // Pushing a named route after loading is complete
+        Navigator.of(context).pushNamed(
+          '/thehub',
+        );
       }
           ),
           RaisedButton(
@@ -109,7 +105,7 @@ class _MembersState extends State<Members> {
                   dynamic result = await _auth.registerEmailPassword(email, password);
                   if(result == null) {
                     setState(() {
-                      error = 'Please supply a valid email';
+                      error = 'Registration successful';
                     });
                   }
                 }
