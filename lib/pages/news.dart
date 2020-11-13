@@ -9,27 +9,9 @@ class News extends StatefulWidget {
 
 class _NewsState extends State<News> {
   // Carousel
-
   int _currentIndex = 0;
   List imgList = [
-  Text(
-  "We believe it is our responsibility to share God’s word with the world, and we try to do this through various ministries designed to serve the community we are in and cater for it’s most pressing needs.",
-  textAlign: TextAlign.center,
-  style: TextStyle(
-  fontFamily: "DidactGothic",
-  fontSize: 18.0,
-  color: Colors.grey[650],
-  ),
-  ),
-    Text(
-      "We believe it is our responsibility to share God’s word with the world, and we try to do this through various ministries designed to serve the community we are in and cater for it’s most pressing needs.",
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        fontFamily: "DidactGothic",
-        fontSize: 18.0,
-        color: Colors.grey[650],
-      ),
-    ),
+    "Lorem ipsum", "Eta bafo"
   ];
 
   @override
@@ -48,7 +30,7 @@ class _NewsState extends State<News> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     CarouselSlider(
-                      options: CarouselOptions(height: 280.0,
+                      options: CarouselOptions(height: 580.0,
                           initialPage: 0,
                           autoPlay: false,
                           enableInfiniteScroll: true,
@@ -62,7 +44,7 @@ class _NewsState extends State<News> {
                               decoration: BoxDecoration(
                                 color: Color(0xff00c2cb),
                               ),
-                              child: Image.asset(i, fit: BoxFit.fill),
+                              child: Text(i),
                             );
                           },
                         );
